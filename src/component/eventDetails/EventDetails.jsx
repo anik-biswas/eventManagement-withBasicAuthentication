@@ -13,8 +13,8 @@ const EventDetails = () => {
     return (
         <div>
             <div className="grid py-5 justify-items-center ">
-            <div className="card lg:card-side w-4/5 h-80 bg-blue-100 shadow-xl">
-            <figure className="w-full lg:w-1/2"><img src={image} alt="Album"/></figure>
+            <div className="card lg:card-side w-4/5 h-80 lg:h-80 bg-blue-100 shadow-xl">
+            <figure className="w-full md:w-full lg:w-1/2 h-full"><img src={image} alt="Album" className=""/></figure>
             <div className="card-body">
             <h2 className="card-title text-3xl font-bold text-orange-800">{title}</h2>
             <p className="text-2xl text-orange-500 font-semibold"><span className="text-zinc-950">Price: </span>{price} $</p>
@@ -26,16 +26,18 @@ const EventDetails = () => {
             </div>
             </div>
             <div>
-            <h2 className="text-4xl px-5 underline text-red-400 my-10">Description</h2>
+            <h2 className="text-5xl text-orange-600 text-center my-10">Description</h2>
             <p className="text-xl px-20 text-justify">{description}</p>
             </div>
             <div>
-            <h2 className="text-4xl px-5 underline text-red-400 my-10">Gallery</h2>
+            <h2 className="text-5xl text-orange-600 text-center my-10">Gallery</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 justify-items-center">
             {images.map((imgs, index) => (
-                <li key={index}>
-                  <img src={imgs} alt={`Image ${index + 1}`} />
+                <li key={index} className="list-none">
+                  <img src={imgs} alt={`Image ${index + 1}`} className="h-60 w-60" />
                 </li>
               ))}
+              </div>
             </div>
 
         </div>
