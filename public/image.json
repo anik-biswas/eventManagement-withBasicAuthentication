@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "title": "Weddings",
+      "images": [
+        "https://example.com/wedding1.jpg",
+        "https://example.com/wedding2.jpg",
+        "https://example.com/wedding3.jpg",
+        "https://example.com/wedding4.jpg",
+        "https://example.com/wedding5.jpg",
+        "https://example.com/wedding6.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Birthday Parties",
+      "images": [
+        "https://example.com/birthday1.jpg",
+        "https://example.com/birthday2.jpg",
+        "https://example.com/birthday3.jpg",
+        "https://example.com/birthday4.jpg",
+        "https://example.com/birthday5.jpg",
+        "https://example.com/birthday6.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Anniversaries",
+      "images": [
+        "https://example.com/anniversary1.jpg",
+        "https://example.com/anniversary2.jpg",
+        "https://example.com/anniversary3.jpg",
+        "https://example.com/anniversary4.jpg",
+        "https://example.com/anniversary5.jpg",
+        "https://example.com/anniversary6.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Engagement Parties",
+      "images": [
+        "https://example.com/engagement1.jpg",
+        "https://example.com/engagement2.jpg",
+        "https://example.com/engagement3.jpg",
+        "https://example.com/engagement4.jpg",
+        "https://example.com/engagement5.jpg",
+        "https://example.com/engagement6.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Retirement Parties",
+      "images": [
+        "https://example.com/retirement1.jpg",
+        "https://example.com/retirement2.jpg",
+        "https://example.com/retirement3.jpg",
+        "https://example.com/retirement4.jpg",
+        "https://example.com/retirement5.jpg",
+        "https://example.com/retirement6.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Baby Shower",
+      "images": [
+        "https://example.com/babyshower1.jpg",
+        "https://example.com/babyshower2.jpg",
+        "https://example.com/babyshower3.jpg",
+        "https://example.com/babyshower4.jpg",
+        "https://example.com/babyshower5.jpg",
+        "https://example.com/babyshower6.jpg"
+      ]
+    }
+  ]
+  

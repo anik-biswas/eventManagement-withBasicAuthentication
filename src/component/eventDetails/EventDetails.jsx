@@ -6,8 +6,10 @@ const EventDetails = () => {
     const idInt = parseInt(id);
     const event = events.find(event => event.id === idInt);
     //console.log(event);
-    const {image,title, price,description} = event;
-
+    const {image,title,images, price,description} = event;
+   
+    console.log(images);
+   
     return (
         <div>
             <div className="grid py-5 justify-items-center ">
@@ -18,7 +20,7 @@ const EventDetails = () => {
             <p className="text-2xl text-orange-500 font-semibold"><span className="text-zinc-950">Price: </span>{price} $</p>
             <p></p>
             <div className="card-actions justify-end">
-            <button className="btn btn-primary">Listen</button>
+            <button className="btn btn-primary">Book</button>
             </div>
             </div>
             </div>
@@ -27,6 +29,15 @@ const EventDetails = () => {
             <h2 className="text-4xl px-5 underline text-red-400 my-10">Description</h2>
             <p className="text-xl px-20 text-justify">{description}</p>
             </div>
+            <div>
+            <h2 className="text-4xl px-5 underline text-red-400 my-10">Gallery</h2>
+            {images.map((imgs, index) => (
+                <li key={index}>
+                  <img src={imgs} alt={`Image ${index + 1}`} />
+                </li>
+              ))}
+            </div>
+
         </div>
     );
 };

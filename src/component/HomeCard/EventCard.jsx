@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const EventCard = (event) => {
     
     const {id,image,title, price} = event.event;
-    console.log(title)
+    
     return (
         <div>
             <div className="card w-72 h-96 bg-blue-100">
