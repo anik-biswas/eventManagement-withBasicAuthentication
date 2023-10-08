@@ -9,6 +9,7 @@ import './index.css'
 import Root from './component/Root.jsx';
 import Home from './component/home/Home';
 import ErrorPage from './component/errorpage/ErrorPage';
+import EventDetails from './component/eventDetails/EventDetails';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,12 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
+      {
+        path: "/event/:id",
+        element: <EventDetails></EventDetails>,
+        loader : () => fetch('/../events.json'),
+      },
+
     ]
   },
 ]);
