@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../firebase/AuthProvider";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const Login = () => {
 
@@ -12,6 +14,8 @@ const Login = () => {
     const handleGoogle = () => {
         googleSignIn().then((result) =>{
             console.log(result.user);
+            navigate(location?.state ? location.state : '/');
+            toast.success('You Login with Google');
         });
     };
     const handleLogin =(e) => {
@@ -24,11 +28,13 @@ const Login = () => {
         console.log(form.get("email"));
         signIn(email,password)
         .then(result=>{
-            console.log(result.user)
-            navigate(location?.state ? location.state : '/')
+            console.log(result.user);
+            navigate(location?.state ? location.state : '/');
+            toast.success('Login successful!'); 
         })
         .catch( error=>{
-            console.error(error)
+            console.error(error);
+            toast.error('Login failed. Please check your credentials.');
         })
 
     };

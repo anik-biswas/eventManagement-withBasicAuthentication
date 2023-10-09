@@ -6,13 +6,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
     
       <div>
-       <ToastContainer></ToastContainer>
+       
       </div>
      
     </>

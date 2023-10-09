@@ -1,12 +1,20 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../firebase/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const{user,logout}= useContext(AuthContext);
+  const navigate =useNavigate()
   const handleSignOut =() =>{
         logout()
-        .then()
+        .then(result=>{
+          
+          console.log("logout")
+          toast.success('Login successful!'); 
+          navigate(location?.state ? location.state : '/');
+          
+      })
         .catch()
   }
     const  links = <>
