@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { AuthContext } from "../../firebase/AuthProvider";
 
 const EventDetails = () => {
+    
     const events = useLoaderData();
     const {id} = useParams();
     const idInt = parseInt(id);
@@ -11,6 +14,7 @@ const EventDetails = () => {
     console.log(images);
    
     return (
+        
         <div>
             <div className="grid py-5 justify-items-center ">
             <div className="card lg:card-side w-4/5 h-80 lg:h-80 bg-blue-100 shadow-xl">

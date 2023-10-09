@@ -1,14 +1,22 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../firebase/AuthProvider";
 
 const Navbar = () => {
+  const{user,logout}= useContext(AuthContext);
+  const handleSignOut =() =>{
+        logout()
+        .then()
+        .catch()
+  }
     const  links = <>
                 <li className="mr-5 text-lg font-medium hidden md:block lg:block" ><NavLink to="/"  >Home</NavLink></li>
-                <li className="mr-5 text-lg font-medium hidden md:block lg:block"><NavLink to="/donations">Donation</NavLink></li>
+                <li className="mr-5 text-lg font-medium hidden md:block lg:block"><NavLink to="/gallery">Gallery</NavLink></li>
                 <li className="mr-5 text-lg font-medium hidden md:block lg:block"><NavLink to="/statistics">Statistics</NavLink></li>
     </>
     const  linksTab = <>
     <li className="mr-5 " ><NavLink to="/"  >Home</NavLink></li>
-    <li className="mr-5 "><NavLink to="/donations">Donation</NavLink></li>
+    <li className="mr-5 "><NavLink to="/gallery">Gallery</NavLink></li>
     <li className="mr-5 "><NavLink to="/statistics">Statistics</NavLink></li>
 </>
     return (
@@ -33,7 +41,15 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="navbar-end">
-              <a className="btn">Login</a>
+
+              {
+                user ?
+                
+                <a onClick={handleSignOut} className="btn">  SignOut</a>
+                :
+                <Link to={"/login"}><a className="btn">Login</a></Link> 
+              }
+             
             </div>
           </div>
 

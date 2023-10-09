@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../firebase/AuthProvider";
 
 const EventCard = (event) => {
-    
+    const{user} = useContext(AuthContext)
     const {id,image,title, price} = event.event;
     
     return (
@@ -12,6 +14,7 @@ const EventCard = (event) => {
             <h2 className="card-title text-2xl text-orange-800">{title}</h2>
             <p className="text-lg font-medium text-orange-500"><span className="text-slate-950">Price: </span> {price} $</p>
             <div className="card-actions justify-end">
+            
             <Link to={`/event/${id}`}><button className="btn btn-primary bg-red-500 border-none">Details</button></Link>
             </div>
             </div>
