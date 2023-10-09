@@ -39,7 +39,7 @@ const Registration = () => {
             })
             .catch(error=>{
                 console.error(error);
-                toast.error('Register failed. Please check your credentials.');
+                toast.error('Registation failed. Please check your credentials.');
             })
         }
        

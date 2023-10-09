@@ -7,7 +7,7 @@ const Banner = () => {
                     <img src="https://i.ibb.co/b5ZvSw7/wed.webp" className="w-full bg-slate-900 opacity-70" />
                     <div className="absolute inset-0 flex  justify-between items-center text-center">
                     <a href="#slide4" className="btn btn-circle">❮</a> 
-                    <div className="text-blue-900 text-6xl">
+                    <div className="text-blue-900 text-3xl md:text-3xl lg:text-6xl">
                     <h2> Wedding Gallery</h2>
                     <p>Celebrating love and happiness</p>
                     </div>
@@ -26,7 +26,7 @@ const Banner = () => {
                     <img src="https://i.ibb.co/0KtL15z/33585b759b6d7d8.jpg" className="w-full bg-slate-900 opacity-70" />
                     <div className="absolute inset-0 flex  justify-between items-center text-center">
                     <a href="#slide2" className="btn btn-circle">❮</a> 
-                    <div className="text-red-700 text-6xl">
+                    <div className="text-red-700 text-3xl md:text-3xl lg:text-6xl">
                     <h2> Wedding Gallery</h2>
                     <p>Celebrating love and happiness</p>
                     </div>
@@ -43,7 +43,7 @@ const Banner = () => {
                 </div>
             </div>
             <div className="text-center justify-center items-center my-10">
-                <h2 className="text-5xl "><span className="text-amber-500">Hello!</span> We Are an Event Planning Agency </h2>
+                <h2 className="text-xl md:text-3xl lg:text-5xl "><span className="text-amber-500">Hello!</span> We Are an Event Planning Agency </h2>
                 <p className="text-lg text-slate-400 mt-5 px-20">As the premier event planning company in New York City, we know that it’s not “one size fits all”. Each
                 event and client is unique and we believe our services should be as well. We know that it should be “Can I hire a planner?” not “Can I afford one?”.</p>
             </div>

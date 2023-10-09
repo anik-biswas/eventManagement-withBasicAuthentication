@@ -11,7 +11,7 @@ const Navbar = () => {
         .then(result=>{
           
           console.log("logout")
-          toast.success('Login successful!'); 
+          toast.success('Logout successful!'); 
           navigate(location?.state ? location.state : '/');
           
       })
@@ -52,8 +52,10 @@ const Navbar = () => {
 
               {
                 user ?
-                
-                <a onClick={handleSignOut} className="btn">  SignOut</a>
+               
+                <div className="flex">
+                  <a className="btn w-10">{user.displayName?user.displayName :user.email}</a>
+                  <a onClick={handleSignOut} className="btn ">  SignOut</a></div>
                 :
                 <Link to={"/login"}><a className="btn">Login</a></Link> 
               }

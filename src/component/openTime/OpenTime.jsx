@@ -2,7 +2,7 @@ const OpenTime = () => {
     return (
         <div>
             <h2 className="text-5xl my-10 text-orange-600 text-center">Opening Time</h2>
-            <div className="grid  grid-cols-1 gap-5 md:grid-cols-4 justify-items-center">
+            <div className="grid  grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 justify-items-center">
             <div className="card w-60 bg-base-100 shadow-xl">
              <div className="card-body">
              

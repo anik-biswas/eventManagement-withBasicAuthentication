@@ -11,9 +11,12 @@ const Login = () => {
     const location= useLocation();
     const navigate= useNavigate();
     const [error,setError] = useState("");
+   
     const handleGoogle = () => {
         googleSignIn().then((result) =>{
+            
             console.log(result.user);
+        
             navigate(location?.state ? location.state : '/');
             toast.success('You Login with Google');
         });
