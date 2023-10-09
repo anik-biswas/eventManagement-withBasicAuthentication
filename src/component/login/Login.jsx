@@ -12,11 +12,11 @@ const Login = () => {
     const handleGoogle = () => {
         googleSignIn().then((result) =>{
             console.log(result.user);
-            navigate(location?.state ? location.state : '/')
         });
     };
     const handleLogin =(e) => {
        e.preventDefault();
+      
         console.log(e.currentTarget);
         const form= new FormData(e.currentTarget);
         const email =form.get('email');

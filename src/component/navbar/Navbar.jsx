@@ -12,12 +12,12 @@ const Navbar = () => {
     const  links = <>
                 <li className="mr-5 text-lg font-medium hidden md:block lg:block" ><NavLink to="/"  >Home</NavLink></li>
                 <li className="mr-5 text-lg font-medium hidden md:block lg:block"><NavLink to="/gallery">Gallery</NavLink></li>
-                <li className="mr-5 text-lg font-medium hidden md:block lg:block"><NavLink to="/statistics">Statistics</NavLink></li>
+                <li className="mr-5 text-lg font-medium hidden md:block lg:block"><NavLink to="/about">About</NavLink></li>
     </>
     const  linksTab = <>
     <li className="mr-5 " ><NavLink to="/"  >Home</NavLink></li>
     <li className="mr-5 "><NavLink to="/gallery">Gallery</NavLink></li>
-    <li className="mr-5 "><NavLink to="/statistics">Statistics</NavLink></li>
+    <li className="mr-5 "><NavLink to="/about">About</NavLink></li>
 </>
     return (
         // <div>

@@ -15,6 +15,7 @@ import Registration from './component/login/Registration';
 import AuthProvider from './firebase/AuthProvider';
 import PribateRoute from './component/PribateRoute';
 import Gallery from './component/gallery/Gallery';
+import About from './component/about/About';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
       {
         path: "/gallery",
         element: <PribateRoute><Gallery></Gallery></PribateRoute>,
+        loader : () => fetch('/../events.json'),
+      },
+      {
+        path: "/about",
+        element: <PribateRoute><About></About></PribateRoute>,
         loader : () => fetch('/../events.json'),
       },
       {
